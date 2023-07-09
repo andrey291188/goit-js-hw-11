@@ -28,7 +28,6 @@ let observer = new IntersectionObserver(onLoad, options);
 function onLoad(entries, observer) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      console.log(entry)
       currentPage += 1;
       searchApiRequest(currentPage);
     };
